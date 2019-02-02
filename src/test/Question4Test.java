@@ -32,5 +32,15 @@ public class Question4Test {
         obj.solutionOne(head, 5);
         SLNodeHelperService.printSLNode(head);
 
+        System.out.println("\nAlways ascending ... :");
+        // always ascending
+        head = SLNodeHelperService.createSLList(1, 7, 2, 6, 3, 8, 4, 9);
+        obj.solutionTwo(head, 5);
+        SLNodeHelperService.printSLNode(head);
+
+        head = SLNodeHelperService.createSLList(9, 8, 7, 6, 5, 4, 3, 2, 1);
+        obj.solutionTwo(head, 5);
+        SLNodeHelperService.printSLNode(head);
+
     }
 }

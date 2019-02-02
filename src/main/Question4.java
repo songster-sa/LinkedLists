@@ -12,6 +12,7 @@ package main;
  */
 public class Question4 {
 
+    // ascending or descending
     public void solutionOne(SLNode head, int x) {
 
         if (head.getData() < x) {
@@ -20,6 +21,11 @@ public class Question4 {
             descending(head, x);
         }
 
+    }
+
+    // always ascending
+    public void solutionTwo(SLNode head, int x) {
+        ascending(head, x);
     }
 
     private void descending(SLNode head, int x) {
@@ -50,8 +56,7 @@ public class Question4 {
         SLNode prev = head;
         boolean swap = false;
 
-        while (node.getNext() != null) {
-            node = node.getNext();
+        while (node != null) {
             if (node.getData() >= x) {
                 if (!swap) {
                     swap = true;
@@ -64,6 +69,7 @@ public class Question4 {
                 node.setData(temp);
                 prev = prev.getNext();
             }
+            node = node.getNext();
         }
 
     }
