@@ -31,4 +31,14 @@ public class SLNodeHelperService {
         }
         return head;
     }
+
+    public static int getLength(SLNode node) {
+        int length = 0;
+
+        while (node != null) {
+            length++;
+            node = node.getNext();
+        }
+        return length;
+    }
 }

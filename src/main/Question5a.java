@@ -1,5 +1,7 @@
 package main;
 
+import test.SLNodeHelperService;
+
 /**
  * Two numbers represented as a SL. Digits in order. Return sum.
  * Example :
@@ -25,8 +27,8 @@ public class Question5a {
         SLNode node1 = head1;
         SLNode node2 = head2;
 
-        int length1 = getLength(node1); // O(n)
-        int length2 = getLength(node2); // O(m)
+        int length1 = SLNodeHelperService.getLength(node1); // O(n)
+        int length2 = SLNodeHelperService.getLength(node2); // O(m)
 
         // make them both same size
         if (length1 > length2) {
@@ -75,16 +77,6 @@ public class Question5a {
             i--;
         }
         return node;
-    }
-
-    private int getLength(SLNode node) {
-        int length = 0;
-
-        while (node != null) {
-            length++;
-            node = node.getNext();
-        }
-        return length;
     }
 
     private SLNode storeSum(int data, SLNode curr) {
